@@ -1,0 +1,102 @@
+.active {
+  color: black;
+  background-color: rgb(98, 100, 100);
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 1px 10px;
+}
+Link {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+li:hover {
+  background-color: rgb(167, 231, 154);
+  color: black;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+li {
+  font-size: 20px;
+  list-style: none;
+  color: rgb(247, 247, 247);
+  list-style: none;
+  text-decoration: none;
+}
+Link:hover {
+  color: black;
+  text-decoration: none;
+}
+.li-a {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: right;
+  gap: 40px;
+  padding: 10px;
+}
+
+/* home css */
+.text-center {
+  margin: 0px auto;
+  /* border: 2px solid green; */
+  height: 1000px;
+  width: 100%;
+  color: white;
+  background-image: linear-gradient(to bottom right, #080614, #350b12);
+}
+.main-div {
+  padding: 100px;
+}
+.home-p {
+  text-align: start;
+}
+.home-btn {
+  background-image: linear-gradient(to bottom right, #080614, #350b12);
+  color: #1650c9;
+  border: 1px solid #1650c9;
+  border-radius: 5px;
+  /* pointer:cursor; */
+}
+/* contect css*/
+.contect-h1 {
+  text-align: center;
+  padding: 20px 50px;
+  color: red;
+}
+.main {
+  border: 2px solid green;
+}
+.row {
+  width: 50%;
+  margin: 50px auto;
+  border-right: none;
+  box-shadow: 4px 3px 14px 1px black;
+}
+.check-box-div {
+  display: flex;
+  gap: 10px;
+}
+.bbt {
+  background-color: #d430b4;
+  color: white;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.bbc {
+  color: #d430b4;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 6px;
+}
+.center {
+  text-align: center;
+  margin: 20px auto;
+}
+/* Product css */
+.d-flex {
+  padding: 30px 10px;
+  margin-top: 30px;
+}
