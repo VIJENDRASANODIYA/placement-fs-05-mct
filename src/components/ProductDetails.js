@@ -12,61 +12,61 @@
 //     { id: '11', course: 'ES6 JavaScript Training', tag: 'javascript' },
 //     { id: '12', course: 'Learn Python Programming', tag: 'python' },
 //   ];
-  const uniqueTags = [...new Set(Item.map(item => item.gender))];
-  console.log(uniqueTags);
+  // const uniqueTags = [...new Set(Item.map(item => item.gender))];
+  // console.log(uniqueTags);
   
-  const ProductDetails = () => {
-    const [Item, SetItem] = useState([]);
-    const [checked, setChecked] = React.useState('all');
-    const [filterData, setFilterData] = React.useState(courses);
+  // const ProductDetails = () => {
+  //   const [Item, SetItem] = useState([]);
+  //   const [checked, setChecked] = React.useState('all');
+  //   const [filterData, setFilterData] = React.useState(courses);
   
-    const gateData = () => {
-        fetch("https://randomuser.me/api/?results=20")
-          .then((res) => res.json())
-          .then((data) =>
-            // console.log();
+  //   const gateData = () => {
+  //       fetch("https://randomuser.me/api/?results=20")
+  //         .then((res) => res.json())
+  //         .then((data) =>
+  //           // console.log();
     
-            SetItem(data.results)
-          );
-        // console.log(All);
-      };
-      useEffect(() => {
-        gateData();
-      }, []);
+  //           SetItem(data.results)
+  //         );
+  //       // console.log(All);
+  //     };
+  //     useEffect(() => {
+  //       gateData();
+  //     }, []);
 
-    const handleFilterItems = tag => {
-      setChecked(tag);
-      if (tag !== 'all') {
-        const filteredItems = courses.filter(item => item.tag === tag);
-        setFilterData(filteredItems);
-      } else {
-        setFilterData(courses);
-      }
-    };
+  //   const handleFilterItems = tag => {
+  //     setChecked(tag);
+  //     if (tag !== 'all') {
+  //       const filteredItems = courses.filter(item => item.tag === tag);
+  //       setFilterData(filteredItems);
+  //     } else {
+  //       setFilterData(courses);
+  //     }
+  //   };
   
-    return (
-      <div>
-        <input
-          type="radio"
-          checked={checked === 'all'}
-          onChange={() => handleFilterItems('all')}
-        /> All
-        {uniqueTags.map((tag, index) => (
-          <div key={index}>
-            <input
-              type="radio"
-              checked={checked === tag}
-              onChange={() => handleFilterItems(tag)}
-            />
-            {tag}
-          </div>
-        ))}
-        {filterData.map((course) => (
-          <li key={course.id}>
-            {course.id}-{course.course}-{course.tag}
-          </li>
-        ))}
-      </div>
-    );
-        }
-        export default ProductDetails;
+  //   return (
+  //     <div>
+  //       <input
+  //         type="radio"
+  //         checked={checked === 'all'}
+  //         onChange={() => handleFilterItems('all')}
+  //       /> All
+  //       {uniqueTags.map((tag, index) => (
+  //         <div key={index}>
+  //           <input
+  //             type="radio"
+  //             checked={checked === tag}
+  //             onChange={() => handleFilterItems(tag)}
+  //           />
+  //           {tag}
+  //         </div>
+  //       ))}
+  //       {filterData.map((course) => (
+  //         <li key={course.id}>
+  //           {course.id}-{course.course}-{course.tag}
+  //         </li>
+  //       ))}
+  //     </div>
+  //   );
+  //       }
+  //       export default ProductDetails;

@@ -11,6 +11,7 @@ import bootstrap from "bootstrap"; // eslint-disable-line no-unused-vars
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import ContectUs from "./components/ContectUs";
 import Logout from "./components/Logout";
+import ProductDetails from "./components/ProductDetails";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,8 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Product" element={<Product />} />
+          <Route path="/ProductDetails" element={<ProductDetails />} />
+
           <Route path="/Users" element={<User />} />
           <Route path="/Contect" element={<ContectUs />} />
           <Route path="/" element={<Logout />} />

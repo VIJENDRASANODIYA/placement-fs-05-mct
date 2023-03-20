@@ -1,19 +1,11 @@
 import { useEffect, useState } from "react";
 import Nav from "./Nav";
+import { Link } from "react-router-dom";
 function Product() {
   const [user, setUser] = useState([]);
 
-  console.log(user);
+  // console.log(user);
 
-  // const category = [
-  //   "Electronics",
-  //   "Jewellery",
-  //   "MensClothing",
-  //   "WomenClothing"
-  // ];
-
-  // const [categorydata, setcategoryData] = useState(category);
-  // console.log(categorydata);
 
   const fetchData = () => {
     return fetch("https://fakestoreapi.com/products/category/electronics")
@@ -91,13 +83,18 @@ function Product() {
         <div
           style={{ flex: "10", boxShadow: "1px 2px 5px 1px ", padding: "10px" }}
         >
-          {user.map((item) => {
+          {
+          user.length === 0 ?(
+            <h1>Lodding....</h1>
+          ):(
+          user.map((item) => {
             return (
               <ul>
                 <li style={{ color: "black" }}>{item.title}</li>
+                {/* <Link to={'/ProductDetails'} style={{ color: "black" }}>{item.title}</Link> */}
               </ul>
             );
-          })}
+          }))}
         </div>
       </div>
     </div>
